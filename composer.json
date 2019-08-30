@@ -1,5 +1,5 @@
 {
-    "name": "pragmarx/google2fa-laravel",
+    "name": "roosht3/google2fa-laravel",
     "description": "A One Time Password Authentication package, compatible with Google Authenticator.",
     "keywords": ["authentication", "two factor authentication", "google2fa", "laravel"],
     "license": "BSD-3-Clause",
@@ -8,6 +8,11 @@
             "name": "Antonio Carlos Ribeiro",
             "email": "acr@antoniocarlosribeiro.com",
             "role": "Creator & Designer"
+        },
+        {
+            "name": "Rooshan Akthar",
+            "email": "roosht3@gmail.com",
+            "role": "Contributor"
         }
     ],
     "require": {

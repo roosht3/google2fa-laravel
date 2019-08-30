@@ -192,6 +192,8 @@ class Google2FA extends Google2FAService
     {
         $this->sessionPut(Constants::SESSION_AUTH_PASSED, true);
 
+        $this->sessionPut(Constants::SESSION_AUTH_CURRENT_USER, $this->getUser()->email);                                                                                                                     
+
         $this->updateCurrentAuthTime();
     }
 
