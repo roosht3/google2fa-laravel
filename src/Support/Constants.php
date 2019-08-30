@@ -10,5 +10,7 @@ class Constants
 
     const SESSION_AUTH_TIME = 'auth_time';
 
+    const SESSION_AUTH_CURRENT_USER = 'current_user';
+
     const SESSION_OTP_TIMESTAMP = 'otp_timestamp';
 }

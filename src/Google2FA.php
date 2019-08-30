@@ -148,6 +148,21 @@ class Google2FA extends Google2FAService
     }
 
     /**
+     * Check if the logged in user is same as old user.
+     *
+     * @return bool
+     */
+    protected function isCurrentUser ()
+    {
+        if ($this->noUserIsAuthenticated) {
+            return true;
+        }
+        if ($this->sessionGet(Constants::SESSION_AUTH_CURRENT_USER) === $this->getUser()->email) {
+            return false;
+        }
+    }
+
+    /**
      * Verifies, in the current session, if a 2fa check has already passed.
      *
      * @return bool
@@ -156,6 +171,7 @@ class Google2FA extends Google2FAService
     {
         return
             (bool) $this->sessionGet(Constants::SESSION_AUTH_PASSED, false) &&
+            (bool) isCurrentUser &&
             !$this->passwordExpired();
     }
 
