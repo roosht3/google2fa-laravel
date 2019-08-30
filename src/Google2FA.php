@@ -154,7 +154,7 @@ class Google2FA extends Google2FAService
      */
     protected function isCurrentUser ()
     {
-        if ($this->noUserIsAuthenticated) {
+        if ($this->noUserIsAuthenticated()) {
             return true;
         }
         if ($this->sessionGet(Constants::SESSION_AUTH_CURRENT_USER) === $this->getUser()->email) {
