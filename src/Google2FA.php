@@ -171,7 +171,7 @@ class Google2FA extends Google2FAService
     {
         return
             (bool) $this->sessionGet(Constants::SESSION_AUTH_PASSED, false) &&
-            (bool) isCurrentUser &&
+            (bool) $this->isCurrentUser() &&
             !$this->passwordExpired();
     }
 
